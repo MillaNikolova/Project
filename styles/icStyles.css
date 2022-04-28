@@ -1,0 +1,237 @@
+html {
+  background-color: #f8b91b;
+  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+}
+body {
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+#logo {
+  float: left;
+  width: 5em;
+  margin-right: 25em;
+}
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  font-size: 17px;
+  color: #f5af00;
+  background-color: #0a0e13;
+
+  padding: 0;
+}
+li {
+  display: inline-block;
+}
+.style {
+  display: inline-block;
+  padding: 20px 25px;
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  background-color: inherit;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.style:hover {
+  color: #000;
+  background-color: #ccc;
+}
+div.homePage {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/concreteBlocks.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #000015;
+  background-attachment: fixed;
+  animation: panning 50s infinite linear;
+  box-shadow: 0 0 10px 10px #f8b91b inset;
+}
+h1 {
+  padding: 100px;
+  font-weight: 800;
+  font-size: 4em;
+  color: #f5af00;
+  text-align: center;
+  text-shadow: 2px 2px black;
+}
+span {
+  text-transform: uppercase;
+}
+h2{
+  font-size: 50px;
+  text-align: center;
+  border-bottom: 2px solid black;
+}
+.text {
+  width: 55%;
+  height: 100%;
+  float: left;
+}
+.aboutUs img {
+  margin-top: 100px;
+  margin-left: 20px;
+  width: 400px;
+  height: auto;
+  vertical-align: middle;
+}
+.box {
+  background-color: rgb(241, 215, 167);
+  width: 75%;
+  height: auto;
+  margin: auto;
+  border-radius: 15px;
+  margin-top: 30px;
+  padding: 20px;
+  overflow: auto;
+}
+.container{
+  width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1px));
+  grid-gap: 15px;
+  margin: 0 auto;
+}
+.container .card{
+  position: relative;
+  width: 300px;
+  height: 400px;
+  margin: 0 auto;
+  background: #FDF5D9;
+  box-shadow: 0 15px 60px rgba(0,0,0, 0.5);
+}
+.container .card .face{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .card .face1{
+  box-sizing: border-box;
+  padding: 20px;
+}
+.container .card .face1 h3{
+  margin: 0;
+  padding: 0;
+}
+.container .card .face1 a{
+  text-decoration: none;
+  color: #111;
+  border: 0.5px solid black;
+  padding: 5px;
+  border-radius: 25px;
+  width: 250px;
+  display: block;
+  margin: 40px auto;
+  text-align: center;
+}
+.container .card .face.face2{
+  background: #111;
+  transition: 0.5s;
+}
+.container .card .face.face2 {
+  background: linear-gradient(45deg, #C2BAA0, #383937);
+}
+.container .card:hover .face.face2{
+  height: 60px;
+}
+.container .card .face.face2 h3{
+  margin: 0;
+  padding: 0;
+  font-size: 5em;
+  color: #fff;
+  transition: 0.5s;
+}
+.container .card:hover .face.face2 h3{
+  font-size: 2em;
+}
+.container::after {
+  content:"";
+  display: block;
+  clear:both;
+}
+.slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.slider {
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+  margin: 20px;
+  text-align: center;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+.slides {
+  display: flex;
+  overflow-x: scroll;
+  position: relative;
+  scroll-behavior: smooth;
+}
+.slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 100%;
+  height: 400px;
+  scroll-snap-align: center;
+  margin-right: 0px;
+  box-sizing: border-box;
+  background: white;
+  transform-origin: center center;
+  transform: scale(1);
+}
+.slide__text {
+  font-size: 40px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+.slide a {
+  background: none;
+  border: none;
+}
+a.prev,
+.slider::before {
+  transform: rotate(135deg);
+  left: 5%;
+}
+a.next,
+.slider::after {
+  transform: rotate(-45deg);
+  right: 5%;
+}
+.slider::before,
+.slider::after,
+.prev,
+.next {
+  position: absolute;
+  top: 48%;
+  width: 35px;
+  height: 35px;
+  border: solid black;
+  border-width: 0 4px 4px 0;
+  padding: 3px;
+  box-sizing: border-box;
+}
+.slider::before,
+.slider::after {
+  content: "";
+  z-index: 1;
+  background: none;
+  pointer-events: none;
+}
