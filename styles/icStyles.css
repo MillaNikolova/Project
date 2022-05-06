@@ -8,10 +8,11 @@ body {
 }
 #logo {
   float: left;
-  width: 5em;
+  height: 3em;
   margin-right: 25em;
 }
 nav {
+  height: 13vh;
   position: fixed;
   top: 0;
   left: 0;
@@ -19,13 +20,13 @@ nav {
   font-size: 17px;
   color: #f5af00;
   background-color: #0a0e13;
-
   padding: 0;
 }
 li {
   display: inline-block;
 }
 .style {
+  margin-bottom: 2em;
   display: inline-block;
   padding: 20px 25px;
   vertical-align: middle;
@@ -59,7 +60,7 @@ h1 {
   font-size: 4em;
   color: #f5af00;
   text-align: center;
-  text-shadow: 2px 2px black;
+  text-shadow: 2px 3px 3px black;
 }
 span {
   text-transform: uppercase;
@@ -68,6 +69,7 @@ h2{
   font-size: 50px;
   text-align: center;
   border-bottom: 2px solid black;
+  text-shadow: 2px 3px 3px rgb(146, 142, 142), 2px 3px 3px black;
 }
 .text {
   width: 55%;
@@ -92,13 +94,14 @@ h2{
   overflow: auto;
 }
 .container{
+  transform: translateX(10vh);
   width: 1200px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1px));
   grid-gap: 15px;
   margin: 0 auto;
 }
-.container .card{
+.card{
   position: relative;
   width: 300px;
   height: 400px;
@@ -106,7 +109,7 @@ h2{
   background: #FDF5D9;
   box-shadow: 0 15px 60px rgba(0,0,0, 0.5);
 }
-.container .card .face{
+.face{
   position: absolute;
   bottom: 0;
   left: 0;
@@ -116,15 +119,15 @@ h2{
   justify-content: center;
   align-items: center;
 }
-.container .card .face1{
+.face1{
   box-sizing: border-box;
   padding: 20px;
 }
-.container .card .face1 h3{
+.face1 h3{
   margin: 0;
   padding: 0;
 }
-.container .card .face1 a{
+.face1 a{
   text-decoration: none;
   color: #111;
   border: 0.5px solid black;
@@ -135,31 +138,31 @@ h2{
   margin: 40px auto;
   text-align: center;
 }
-.container .card .face.face2{
+.face2{
   background: #111;
   transition: 0.5s;
 }
-.container .card .face.face2 {
+.face2 {
   background: linear-gradient(45deg, #C2BAA0, #383937);
 }
-.container .card:hover .face.face2{
+.card:hover .face.face2{
   height: 60px;
 }
-.container .card .face.face2 h3{
+.face2 h3{
   margin: 0;
   padding: 0;
   font-size: 5em;
   color: #fff;
   transition: 0.5s;
 }
-.container .card:hover .face.face2 h3{
+.card:hover .face2 h3{
   font-size: 2em;
 }
-.container::after {
+/* .container::after {
   content:"";
   display: block;
   clear:both;
-}
+} */
 .slider-container {
   display: flex;
   align-items: center;
